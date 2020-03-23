@@ -1,0 +1,27 @@
+server:
+  port: 8100
+  servlet:
+    context-path: /
+
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+  datasource:
+    url: YOUR_SQL_URL
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: YOUR_USERNAME
+    password: YOUR_PASSWORD
+  
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+      
+  security:
+    user:
+      name: test
+      password: 1234

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.finaltask.repository.UserRepository">
+
+	<select id="findByUsername" resultType="com.example.finaltask.model.User">
+		SELECT * FROM user where username=#{username}
+	</select>
+
+
+
+<!-- 테스트를 위한 계정생성//(필요하기에 임시로 생성) -->
+	<insert id="save">
+		INSERT INTO user VALUES(null,#{username},#{password},now())
+	</insert>
+<!-- 테스트를 위한 계정생성//(필요하기에 임시로 생성) -->
+</mapper>
